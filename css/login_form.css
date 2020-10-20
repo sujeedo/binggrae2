@@ -1,0 +1,397 @@
+:root {
+
+	/* Color */
+	--color-white: #ffffff;
+	--color-light-white: #eeeeee;
+	--color-dark-white: #d1d1d1;
+	--color-grey: #616161;
+	--color-light-grey: #7c7979;
+	--color-dark-grey: #4d4d4d;
+	--color-black: #000000;
+	--color-yellow: #F2EB8D;
+	--color-dark-yellow: #e9c600;
+	--color-orange: #F2AC57;
+	--color-dark-orange: #f8873b;
+	--color-coral-pink: #ff553e;
+	--color-pink: #ff7593;
+	--color-dark-pink: #d66b6b;
+	--color-light-purple: #a956c2;
+	--color-dark-purple: #533a63;
+	--color-red: #F22929;
+	--color-corar-red: #ff3c5d;
+	--color-light-mint: #40d6b6;
+	--color-mint: #00C0A7;
+	--color-dark-mint: #009191;
+	--color-light-blue: #5eddd3;
+	--color-blue: #32ccf3;
+	--color-dark-blue: #7ab9ec;
+	--color-dark-darkblue: #5895f0;
+	--color-shadow: #533a6383;
+
+	/* Font size */
+	--font-XXlarge: 7em;
+	--font-Xlarge: 40px;
+	--font-large: 30px;
+	--font-medium: 25px;
+	--font-small-medium: 22px;
+	--font-regular: 17px;
+	--font-small: 15px;
+	--font-micro: 12px;
+
+	/* Font height */
+	--font-medium-height: 35px;
+	--font-regular-height: 25px;
+
+	/*Animation*/
+	--animation-duration: 300ms;
+
+	/*button font family*/
+	--button-famlly: danjunghae;
+
+	/*basic font family*/
+	--basic-family: maplestoryL;
+
+	/*title font family*/
+	--title-family: tmonsori;
+} 
+
+
+@font-face {
+	font-family: godoM;
+	src: url(../font/GodoM.ttf);
+}
+
+@font-face {
+	font-family: godoB;
+	src: url(../font/GodoB.ttf);
+}
+
+@font-face {
+	font-family: danjunghae;
+	src: url(../font/Cafe24Danjunghae.ttf);
+}
+
+@font-face {
+	font-family: dangdanghae;
+	src: url(../font/Cafe24Dangdanghae.ttf);
+}
+
+@font-face {
+	font-family: tmonsori;
+	src: url(../font/TmonMonsori.ttf);
+}
+
+@font-face {
+	font-family: maplestoryB;
+	src: url(../font/Maplestory\ Bold.ttf);
+}
+
+@font-face {
+	font-family: maplestoryL;
+	src: url(../font/Maplestory\ Light.ttf);
+}
+
+@font-face {
+	font-family: BinggraeB;
+	src: url(../font/BinggraeⅡ\ Bold.ttf);
+}
+
+@font-face {
+	font-family: BinggraeL;
+	src: url(../font/BinggraeⅡ\ Light.ttf);
+}
+
+@font-face {
+	font-family: Ghana;
+	src: url(../font/Ghanachocolate.ttf);
+}
+
+@font-face {
+	font-family: Spring;
+	src: url(../font/SpringWind.ttf);
+}
+
+
+/*=============== Universal tags ================*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	width: 100%;
+	margin: 20px 0px;
+	font-size: small;
+	color: #7c7979;
+	cursor: default;
+}
+
+/*=============== Login Style ================*/
+
+#main_content {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #eeeeee;
+	font-family: 'Nanum Gothic', sans-serif;
+	transition: 0.3s ease-in-out;
+}
+
+#login_box {
+	width: 500px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#login_title {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	flex-basis: 25%;
+	font-family: tmonsori;
+	font-style: italic;
+	font-weight: 600;
+}
+
+#login_title a {
+	font-size: 2em;
+	letter-spacing: 0px;
+	-webkit-text-stroke: 0px rgb(255, 255, 255);
+}
+
+#login_title span {
+	display: block;
+	font-family: Ghana;
+	font-size: var(--font-small-medium);
+	letter-spacing: 10px;
+}
+
+#login_title a:visited, #login_title a:link {
+	color: var(--color-black);
+}
+
+#login_form {
+	width: 100%;
+	height: auto;
+	padding: 35px 35px;
+	padding-bottom: 60px;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-dark-white);
+	border-radius: 5px;
+}
+
+.login_input {
+	width: 90%;
+}
+
+.login_input ul li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid var(--color-dark-white);
+}
+
+input {
+	width: 100%;
+	height: 65px;
+	padding: 10px;
+	order: 2;
+	text-align: left;
+	border: 0px solid transparent;
+}
+
+input::placeholder {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: var(--font-regular);
+	letter-spacing: -1px;
+	color: var(--color-dark-white);
+}
+
+input:focus{
+	outline: none;
+}
+
+input:focus~label>i{
+	color: var(--color-mint);
+}
+
+label i {
+	font-size: var(--font-regular);
+	color: var(--color-dark-white);
+}
+
+#login_btn {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#login_btn p:nth-of-type(1) span{
+	font-size: var(--font-micro);
+	color: var(--color-dark-white);
+}
+
+.login_button {
+	width: 100%;
+	padding: 20px 0px;
+	background-color: var(--color-light-mint);
+	border-radius: 5px;
+	color: var(--color-white);
+	font-weight: 700;
+	font-size: var(--font-regular);
+	cursor: pointer;
+}
+
+.login_button:visited, .login_button:link {
+	color: var(--color-white);
+}
+
+.login_button i {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.login_button:hover {
+	background-color: var(--color-mint);
+}
+
+.join_button {
+	width: 50%;
+	padding: 15px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--color-dark-white);
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: small;
+	color: var(--color-black);
+}
+
+.join_button:visited, .join_button:link {
+	color: var(--color-black);
+}
+
+.join_button:hover {
+	color: var(--color-mint);
+}
+
+.page_btn {
+	width: 90%;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid var(--color-dark-white);
+}
+
+.page_btn ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.page_btn ul li{
+	width: 24%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page_btn a {
+	width: 100%;
+	padding: 10px 0px;
+	display: flex;
+	justify-content: center;
+	border: 1px solid var(--color-dark-white);
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: small;
+}
+
+.page_btn a i {
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.page_btn a:visited, .page_btn a:link {
+	color: var(--color-light-grey);
+}
+
+.page_btn a:hover {
+	background-color: var(--color-mint);
+	color: var(--color-white);
+}
+
+footer {
+	margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-basis: 15%;
+	font-size: var(--font-micro);
+	color: var(--color-light-grey);
+}
+
+#home_button {
+	margin-bottom: 10px;
+}
+
+
+@media screen and (max-width : 600px) {
+
+	#main_content {
+		width: 100%;
+		height: auto;
+		background-color: var(--color-white);
+	}
+
+	#login_box {
+		width: 100%;
+		height: auto;
+	}
+
+	#login_form {
+		width: 100%;
+		height: auto;
+		padding: 20px;
+		border: 0px;
+	}
+
+	#login_title {
+		margin-top: 60px;
+	}
+
+	.page_btn ul {
+		flex-direction: column;
+		justify-content: space-between;
+		height: 175px;
+	}
+
+	.page_btn ul li {
+		width: 100%;
+	}
+}
